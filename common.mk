@@ -24,9 +24,6 @@
 
 $(call inherit-product, vendor/motorola/sdm660-common/sdm660-common-vendor.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -43,7 +40,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.soundtrigger@2.1-impl \
-    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     libaacwrapper \
